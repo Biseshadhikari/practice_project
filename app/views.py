@@ -1,14 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from app.models import *
 # Create your views here.
 
 def Home(request):
-    # return HttpResponse('Home Page')
-    return render(request,'base.html')
+    properties = Property.objects.all()
+    print(properties)
+    context = {
+        'properties':properties
+    }
+    return render(request,'base.html',context)
 
 def about_us(request):
-    # return HttpResponse('<h1 style = "color:red">hello world</h1>')
-    
+
+
     context = { 
         'name':"bisesh adhikari",
         "address":"biratnagar",

@@ -55,7 +55,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'template'],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +80,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'myproject',
+#         'USER': 'myprojectuser',
+#         'PASSWORD': 'password',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
